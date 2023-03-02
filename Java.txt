@@ -1,0 +1,90 @@
+1. Java was introduced in the year 1995
+2.it is owned by Oracle.
+3. Java file name and class containing main() name should be same.
+4. Every line of code that runs in Java must be inside a class.
+5. println() method to print a line of text to the screen.
+6. "final" keyword (\this will declare the variable as "final" or "constant", which means unchangeable and read-only
+
+
+
+
+
+
+package myPackage;     
+
+public class Balance {
+	String name;
+	double bal;
+
+Balance(String n, double b) {
+	name = n;
+	bal = b;
+}
+
+void show() {
+	if (bal < 0) {
+	System.out.print("Sorry! Negative balance ");
+	}
+	System.out.println(name + ": $" + bal);
+	}
+}
+import myPackage.Balance;
+public class Savings extends Balance{
+     String branch;
+     Int customerID;
+     Savings(String n, double bal, String br, int id) {
+         Balance(n, bal);
+         Branch = br;
+         customerID = id;
+     }
+
+void show() {
+	if (bal < 0) {
+	System.out.print("Sorry! Negative balance ");
+	}
+	System.out.println(name + ": $" + bal +    + branch +    +id);
+}
+class Demonstration_810{
+	public static void main(String args[]) {
+	Savings current[] = new Savings[3];
+	current[0] = new Balance("D. Samanta", 123.23,"Kolkata", 555);
+	current[1] = new Balance("T. Ahmed", 157.02, "Chennai", 420);
+	current[2] = new Balance("N. Sinhababu", -12.33, "Mumbai" + 999);
+
+	for (int i = 0; i < 3; i++) {
+	current[i].show();
+	}
+  }
+}
+
+
+
+
+
+
+
+package package_name;
+public class ClassOne {
+ public void methodClassOne() {
+ System.out.println("Hello there its ClassOne");
+ }
+} 
+package package_one;
+public class ClassTwo {
+ public void methodClassTwo(){
+ System.out.println("Hello there i am ClassTwo");
+ }
+}
+
+File name – Testing.java
+import package_one.ClassTwo;
+import package_name.ClassOne;
+public class Testing {
+ public static void main(String[] args){
+ ClassTwo a = new ClassTwo();
+ ClassOne b = new ClassOne();
+ a.methodClassTwo();
+ b.methodClassOne();
+ }
+}
+
